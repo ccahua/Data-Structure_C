@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+//O(2^N)
+//斐波那契数列的递归写法完全是一个没有实际作用的写法，因为太慢了。
+
+long long Fib(size_t N) {
+	if (N < 3) {
+		return 1;
+	}
+	return Fib(N - 1) + Fib(N - 2);
+}
+
+int main() {
+	printf("%lld\n", Fib(20));
+	return 0;
+}
